@@ -56,14 +56,11 @@ import java.util.Scanner;
                   teamHistory2();
                 }
                 else{
-                  System.out.println("Would you like to move onto [1] Competition Hisotyr or [2] Exit?");
-                  switch(myScanner.nextInt()){
-                    case 1 -> compHistory();
-                    case 2 -> exit();
+                  moveonTeam();
                 }
               }
           }
-        }
+        
         public static void compHistory(){
           Scanner myScanner = new Scanner(System.in);
             System.out.println("Which of the following awards did AZTECH Rbotics recieve during the Crescendo Season? (Impact Award or Spirit Award or Wood Flowers Award)");
@@ -85,25 +82,148 @@ import java.util.Scanner;
                   compHistory2();
                 }
                 else{
-                  System.out.println("Would you like to move onto [1] Team History or [2] Exit?");
-                  switch(myScanner.nextInt()){
-                    case 1 -> teamHistory();
-                    case 2 -> exit();
-                }
+                moveonComp();  
+                
               }
           }
+          myScanner.close();
         }
 
         public static void teamHistory2(){
-
+            System.out.println("Who founded the team? (Mr. Heiser or Mr. Hawkins)");
+            Scanner myScanner = new Scanner(System.in);
+            if("Mr. Heiser".equals(myScanner.nextLine())){
+              System.out.println("Correct! Would you like to continue with the Team History Category? (y/n)");
+              if("y".equals(myScanner.nextLine())){
+                teamHistory3();
+              }
+              else{
+                System.out.println("Would you like to move onto [1] Competition History or [2] Exit?");
+                switch(myScanner.nextInt()){
+                  case 1 -> compHistory();
+                  case 2 -> exit();
+                }
+              }
+              myScanner.close();
+            }
+            else{
+              System.out.println("Sorry, not quite! Would you like to continue with the Team History Category? (y/n)");
+                if("y".equals(myScanner.nextLine())){
+                  teamHistory3();
+                }
+                else{
+                  moveonTeam();
+                }
+              }
+          }
+        
+        public static void teamHistory3(){
+          Scanner myScanner = new Scanner(System.in);
+           System.out.println("Who is one of the current lead mentors?(Dr. Wendell or Charlie)");
+          
+            if("Dr. Wendell".equals(myScanner.nextLine())){
+              System.out.println("Correct! Would you like to continue with the Team History Category? (y/n)");
+              if("y".equals(myScanner.nextLine())){
+                teamHistory4();
+              }
+              else{
+                System.out.println("Would you like to move onto [1] Competition History or [2] Exit?");
+                switch(myScanner.nextInt()){
+                  case 1 -> compHistory();
+                  case 2 -> exit();
+                }
+              }
+              myScanner.close();
+            }
+            else{
+              System.out.println("Sorry, not quite! Would you like to continue with the Team History Category? (y/n)");
+                if("y".equals(myScanner.nextLine())){
+                  teamHistory4();
+                }
+                else{
+                  moveonTeam();
+                }
+              }
+          myScanner.close();
         }
        
-        
-        public static void compHistory2(){
-
+        public static void teamHistory4(){
+          Scanner myScanner = new Scanner(System.in);
+          System.out.println("What is the highest position in the team organization?(Business/Technical President [1] or Engineering Director [2] or Lead Mentor [3])");
+          
+            if("1".equals(myScanner.nextLine())){
+              System.out.println("Correct! Would you like to continue with the Team History Category? (y/n)");
+              if("y".equals(myScanner.nextLine())){
+                teamHistory5();
+              }
+              else{
+                System.out.println("Would you like to move onto [1] Competition History or [2] Exit?");
+                switch(myScanner.nextInt()){
+                  case 1 -> compHistory();
+                  case 2 -> exit();
+                }
+              }
+              myScanner.close();
+            }
+            else{
+              System.out.println("Sorry, not quite! Would you like to continue with the Team History Category? (y/n)");
+                if("y".equals(myScanner.nextLine())){
+                  teamHistory5();
+                }
+                else{
+                  moveonTeam();
+                }
+              }
+          myScanner.close();
         }
+
+        public static void teamHistory5(){
+          Scanner myScanner = new Scanner(System.in);
+          myScanner.close();
+        }
+
+        public static void compHistory2(){
+          Scanner myScanner = new Scanner(System.in);
+          myScanner.close();
+        }
+
+        public static void compHistory3(){
+          Scanner myScanner = new Scanner(System.in);
+          myScanner.close();
+        }
+
+        public static void compHistory4(){
+          Scanner myScanner = new Scanner(System.in);
+          myScanner.close();
+        }
+
+        public static void compHistory5(){
+          Scanner myScanner = new Scanner(System.in);
+          myScanner.close();
+        }
+
+        public static void moveonTeam(){
+          Scanner myScanner = new Scanner(System.in);
+          System.out.println("Would you like to move onto [1] Competition History or [2] Exit?");
+                  switch(myScanner.nextInt()){
+                    case 1 -> compHistory();
+                    case 2 -> exit();
+                  }
+          myScanner.close();
+        }
+
+        public static void moveonComp(){
+          Scanner myScanner = new Scanner(System.in);
+           System.out.println("Would you like to move onto [1] Team History or [2] Exit?");
+                  switch(myScanner.nextInt()){
+                    case 1 -> teamHistory();
+                    case 2 -> exit();
+        }
+        myScanner.close();
+      }
          public static void exit(){
           System.exit (0);
         }
       }
+    
   
