@@ -1,2 +1,2 @@
 # chooseyourownadventure
-This code is my first attempt at a self made choose your own adventure. I am spending a lot of time to familarize myself on switch statements vs if else statements. The code itself is a quiz someone from my robotics team, AZTECH Robotics, could take in order to learn more team history
+This code is my first attempt at a self made choose your own adventure. I am spending a lot of time to familarize myself on switch statements vs if else statements. The code itself is a quiz someone from my robotics team, AZTECH Robotics, could take in order to learn more team history. The commit files are in order of commit 1, choose your own adventure commit 2, app, and then main which includes commits 4 and 5.
